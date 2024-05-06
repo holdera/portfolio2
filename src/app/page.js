@@ -5,10 +5,13 @@ import Contact from './components/Sections/Contact';
 
 export default function Home() {
 	return (
-		<main className='relative z-10'>
-			<AboutMe />
-			<Basics />
-			<Contact />
-		</main>
+		<>
+			<main className='relative z-20 bg-black'>
+				<AboutMe />
+				<Basics />
+				<Contact />
+			</main>
+			<div id='footer-spacer' className='h-[40vh]' />
+		</>
 	);
 }

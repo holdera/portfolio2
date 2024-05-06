@@ -1,16 +1,11 @@
-import { useEffect, useState } from "react";
-import { useLockScroll } from "../../../utils/LockScroll";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
-import { h2Heading } from "../../../ui/styles";
-import Close from "../../../assets/images/close.svg";
+import { useEffect, useState } from 'react';
+import { useLockScroll } from '../../../utils/LockScroll';
+import Image from 'next/image';
+import { motion, AnimatePresence } from 'framer-motion';
+import { h2Heading } from '../../../ui/styles';
+import Close from '../../../assets/images/close.svg';
 
-export default function Modal({
-	children,
-	modalTitle,
-	triggerContent,
-	...props
-}) {
+export default function Modal({ children, triggerContent, ...props }) {
 	const [showModal, setShowModal] = useState(false);
 	const { lockScroll, unLockScroll } = useLockScroll();
 
@@ -25,9 +20,9 @@ export default function Modal({
 	}
 
 	useEffect(() => {
-		window.addEventListener("keypress", (e) => {
+		window.addEventListener('keypress', (e) => {
 			console.log(e.key);
-			if (e.key === "Enter" || e.which === 13) {
+			if (e.key === 'Enter' || e.which === 13) {
 				handleCloseModal();
 			}
 		});
@@ -38,26 +33,24 @@ export default function Modal({
 			{showModal && (
 				<>
 					<div
-						id="modal__backdrop"
-						className="bg-[rgba(0,0,0,0.55)] transition-all ease-linear fixed z-10 top-0 left-0 w-full h-full"
-						aria-modal="true"
+						id='modal__backdrop'
+						className='bg-[rgba(0,0,0,0.55)] transition-all ease-linear fixed z-10 top-0 left-0 w-full h-full'
+						aria-modal='true'
 						onClick={handleCloseModal}
 					></div>
 					<div
-						id="modal"
-						className="block bg-white rounded-3xl fixed top-1/2 z-30 w-[85%] m-auto left-0 right-0 -translate-y-2/4 text-black p-7"
+						id='modal'
+						className='block bg-white rounded-3xl fixed top-1/2 z-30 w-[85%] m-auto left-0 right-0 -translate-y-2/4 text-black p-7'
 					>
 						<button
-							id="close"
-							className="absolute right-[30px] top-5"
+							id='close'
+							aria-label='Close modal'
+							className='absolute right-[30px] top-5'
 							onClick={handleCloseModal}
 						>
-							<Image src={Close} alt="Close modal" />
+							<Close />
 						</button>
-						<h2 className={[h2Heading, "mt-0 mb-5"]}>
-							{modalTitle}
-						</h2>
-						<div className="modal__content">{children}</div>
+						<div className='modal__content'>{children}</div>
 					</div>
 				</>
 			)}

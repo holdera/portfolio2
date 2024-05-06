@@ -24,14 +24,14 @@ export default function Navigation({ menuLinks }) {
 			{open && (
 				<nav
 					id='site-navigation'
-					className='fixed top-0 left-0 w-full h-screen bg-white z-20'
+					className='fixed top-0 left-0 w-full h-screen bg-white z-30 text-center pt-16'
 				>
 					{' '}
 					<ul>
 						{menuLinks.map((link, i) => (
-							<li key={`link-${i}`}>
+							<li key={`link-${i}`} className='mb-5'>
 								<Link
-									className='antialiased upp text-black font-bold text-2xl md:text-3xl'
+									className='antialiased text-black font-bold text-2xl md:text-3xl'
 									href={link.href}
 								>
 									{link.text}

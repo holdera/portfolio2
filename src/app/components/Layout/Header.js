@@ -30,7 +30,7 @@ export default function Header() {
 	}, []);
 
 	return (
-		<header className='py-4 px-5'>
+		<header className='py-4 px-3 lg:px-5'>
 			<div className='container mx-auto flex justify-between relative'>
 				<Link className='font-bold' href='/'>
 					Meet Alannah Holder
