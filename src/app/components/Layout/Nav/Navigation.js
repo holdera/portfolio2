@@ -56,7 +56,7 @@ export default function Navigation({ menuLinks }) {
 							{menuLinks.map((link, i) => (
 								<li key={`link-${i}`} className='mb-5'>
 									<Link
-										className='antialiased text-black font-bold text-2xl md:text-3xl'
+										className=' antialiased text-black font-bold text-2xl md:text-3xl hover:underline transition-all'
 										href={link.href}
 										onClick={handleLinkClick}
 									>

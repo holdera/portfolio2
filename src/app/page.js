@@ -11,7 +11,6 @@ export default function Home() {
 				<Basics />
 				<Contact />
 			</main>
-			<div id='footer-spacer' className='h-[40vh]' />
 		</>
 	);
 }

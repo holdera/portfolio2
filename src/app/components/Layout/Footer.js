@@ -50,8 +50,8 @@ export default function Footer() {
 					</div>
 					<div className='border border-solid border-white absolute top-[30px] w-full' />
 					<ul className='pl-4'>
-						{footerLinks.map((links) => (
-							<li>
+						{footerLinks.map((links, i) => (
+							<li key={`sm-${i}`}>
 								{links.target ? (
 									<a
 										target='_blank'
