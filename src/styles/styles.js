@@ -1,6 +1,6 @@
 export const activeTabStyles = `text-pink`;
 
-export const containerStyles = `container max-w-[1000px] mx-auto w-full`;
+export const containerStyles = `container max-w-1000 mx-auto w-full`;
 
 export const gradient = 'bg-gradient-to-r from-violet-500 to-fuchsia-500';
 

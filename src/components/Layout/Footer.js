@@ -1,11 +1,32 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { containerStyles } from '@styles/styles';
-import IconEmail from '@images/icons/icon-email.svg';
+import { motion, useScroll, useTransform } from 'framer-motion';
 import IconGithub from '@images/icons/icon-github.svg';
 import IconLinkedIn from '@images/icons/icon-linkedin.svg';
 
 export default function Footer() {
 	const todaysDate = new Date();
+
+	const sectionRef = useRef(null);
+
+	const { scrollYProgress } = useScroll({
+		target: sectionRef,
+		offset: ['center end', 'end center'],
+	});
+	const viewportRoot = [0, 0.5];
+
+	const rotateX = useTransform(scrollYProgress, viewportRoot, [88, 0]);
+	const scale = useTransform(scrollYProgress, viewportRoot, [1.05, 1]);
+	const translate = useTransform(scrollYProgress, viewportRoot, [
+		'0%, 150%',
+		'0%, 0%',
+	]);
+
+	const opacity = useTransform(
+		scrollYProgress,
+		[0, 0.3, 0.4, 0.5, 0.7],
+		[0, 0, 0.5, 1, 1]
+	);
 
 	const socialMediaLinks = [
 		{
@@ -26,10 +47,20 @@ export default function Footer() {
 
 	return (
 		<>
-			<div tabIndex='0' id='contact-me' className='h-screen' />
-			<footer className='h-screen fixed flex flex-col justify-center w-full  bottom-0 left-0 z-0 pt-5 px-5'>
+			{/* <div tabIndex='0' id='contact-me' className='h-screen' /> */}
+			<footer
+				ref={sectionRef}
+				className='h-screen flex flex-col justify-center w-full bottom-0 left-0 z-0 pt-5 px-5'
+			>
 				<div className={`${containerStyles} relative w-full`}>
-					<div className='rounded-xl border border-solid border-violet-500 pt-12 pb-4 md:pt-16'>
+					<motion.div
+						className='rounded-xl border border-solid border-violet-500 pt-12 pb-4 md:pt-16'
+						style={{
+							rotateX,
+							scale,
+							translate,
+						}}
+					>
 						<div className='absolute top-0 flex gap-1 pl-4 pt-[10px]'>
 							<div className={`${circleStyles} bg-red-600`} />
 							<div className={`${circleStyles} bg-yellow-300`} />
@@ -37,7 +68,10 @@ export default function Footer() {
 						</div>
 						<div className='border border-solid border-violet-500 absolute top-[30px] w-full' />
 
-						<div className='text-center px-5'>
+						<motion.div
+							className='text-center px-5'
+							style={{ opacity }}
+						>
 							<h2 className='font-bold mb-5 text-2xl md:text-4xl lg:text-5xl'>
 								Contact Me
 							</h2>
@@ -61,7 +95,7 @@ export default function Footer() {
 									view my resume
 								</a>
 							</div>
-						</div>
+						</motion.div>
 						<ul className='flex gap-4 mt-10 justify-center'>
 							{socialMediaLinks.map((sm, i) => (
 								<li key={`sm-${i}`}>
@@ -77,7 +111,7 @@ export default function Footer() {
 						<p className='text-semibold text-sm text-center py-4'>
 							&copy; Alannah Holder Inc {todaysDate.getFullYear()}
 						</p>
-					</div>
+					</motion.div>
 				</div>
 			</footer>
 		</>

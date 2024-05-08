@@ -16,7 +16,7 @@ export default function AboutMe() {
 		<Section
 			ref={sectionRef}
 			id='about-me'
-			className='flex h-screen items-start justify-center pt-[40%] text-center md:pt-[30%] lg:pt-[234px]'
+			className='flex h-screen items-center justify-center text-center'
 		>
 			<h1 className={h1Heading}>
 				Hello My Name is{' '}

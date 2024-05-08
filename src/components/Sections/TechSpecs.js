@@ -12,14 +12,14 @@ export default function TechSpecs() {
 	return (
 		<section
 			id='technical-skills'
-			className={`${sectionStyle} mb-20 pb-6 md:pb-28 md:mb-0`}
+			className={`${sectionStyle} mb-20 pb-6 md:pb-20 md:mb-0`}
 		>
 			<div
-				className={`${containerStyles} pt-20 max-w-none px-5 site-container relative`}
+				className={`${containerStyles} pt-20 min-h-[inherit] max-w-[1200px] px-5 site-container relative`}
 			>
 				<h2 className={h1Heading}>Technical Specs</h2>
 
-				<div className='flex flex-wrap justify-center gap-3 md:gap-5 md:w-[90%] max-w-[1000px] mt-10 mx-auto overflow-hidden'>
+				<div className='flex flex-wrap justify-center gap-3 md:gap-5 md:w-[90%] max-w-1000 mt-10 mx-auto overflow-hidden'>
 					{techData.map((skills, i) => (
 						<motion.div
 							key={`skill-${skills.text}`}
