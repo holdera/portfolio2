@@ -19,14 +19,19 @@ export default function WorkExperience() {
 
 	const height = useTransform(scrollYProgress, [0, 0.8], ['0%', '100%']);
 	return (
-		<section className='text-center flex items-start justify-center mb-10 md:mb-24'>
-			<div className={`${containerStyles} px-5 site-container relative`}>
+		<section
+			id='work-experience'
+			className='text-center flex items-start justify-center mb-10 md:mb-24'
+		>
+			<div
+				className={`${containerStyles} pt-20 px-5 site-container relative`}
+			>
 				<h2 className={`${h1Heading} text-left`}>My Work Journey</h2>
 
 				<div
 					ref={workRef}
 					id='work-timeline'
-					className='flex gap-1 md:gap-5 max-w-[1000px] mt-10 mx-auto w-full'
+					className='flex gap-1 md:gap-5  mt-10  w-full'
 				>
 					<div className='flex flex-col justify-between items-center relative w-full max-w-[20%]'>
 						<div id='grey-line' className='w-0.5 h-full bg-white' />

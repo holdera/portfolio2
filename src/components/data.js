@@ -94,7 +94,7 @@ export const tabData = [
 	},
 ];
 
-export const skillsData = [
+export const techData = [
 	{
 		text: 'HTML',
 		image: html,
@@ -112,7 +112,7 @@ export const skillsData = [
 		image: tailwindcss,
 	},
 	{
-		text: 'Javascript',
+		text: 'JavaScript',
 		image: javascript,
 	},
 	{
@@ -157,6 +157,21 @@ export const skillsData = [
 	},
 ];
 
+export const skillsData = [
+	{
+		text: 'Web Accessibility Compliance',
+		desc: ['WCAG', 'AODA', 'Section 508'],
+	},
+	{
+		text: 'Cookie Privacy Laws',
+		desc: ['PIPEDA', 'GDPR'],
+	},
+	{
+		text: 'Google Analytics',
+		desc: ['GA4 and legacy of GA3', 'Implementation of GTM'],
+	},
+];
+
 export const workData = [
 	{
 		title: (
@@ -196,7 +211,7 @@ export const workData = [
 		title: (
 			<>
 				Web Developer,{' '}
-				<span className='text-[#febc25]'>Baby-Robot /KBSP</span>
+				<span className='text-[#febc25]'>Baby&#8209;Robot/KBSP</span>
 			</>
 		),
 		date: 'October 2014 to January 2015',

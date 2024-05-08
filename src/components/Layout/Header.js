@@ -4,9 +4,11 @@ import { Link } from 'gatsby';
 
 export default function Header({ itemInView }) {
 	const siteLinks = [
-		{ text: 'Basics', href: '#basics' },
 		{ text: 'About Me', href: '#about-me' },
-		{ text: 'Contact', href: '#contact' },
+		{ text: 'Work Experience', href: '#work-experience' },
+		{ text: 'Technical Specs', href: '#technical-skills' },
+		{ text: 'Non-Technical Skill Set', href: '#non-tech-skillset' },
+		{ text: 'Contact', href: '#contact-me' },
 	];
 
 	return (
