@@ -28,6 +28,9 @@ module.exports = {
 					'50%': { transform: 'translateY(0px)' },
 				},
 			},
+			maxWidth: {
+				1000: '62.5rem',
+			},
 		},
 	},
 	plugins: [],

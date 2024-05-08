@@ -17,7 +17,7 @@ export default function Header({ itemInView }) {
 				itemInView ? 'static z-30' : 'fixed z-30'
 			}`}
 		>
-			<div className='container mx-auto flex justify-between relative'>
+			<div className='w-full mx-auto flex justify-between relative max-w-1000'>
 				<Link className='font-bold' to='/'>
 					Meet Alannah Holder
 				</Link>

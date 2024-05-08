@@ -21,21 +21,21 @@ export default function SkillSet() {
 
 	const opacity = useTransform(
 		scrollYProgress,
-		[0, 0.3, 0.4, 0.7],
-		[0, 0, 0.5, 1]
+		[0, 0.3, 0.4, 0.5, 0.7],
+		[0, 0, 0.5, 1, 1]
 	);
 
 	return (
 		<section
 			id='non-tech-skillset'
 			ref={sectionRef}
-			className={`${sectionStyle} min-h-screen items-center mb-20 md:mb-0 text-left`}
+			className={`${sectionStyle} min-h-screen items-center mb-20 md:mb-0 text-left pb-6`}
 		>
 			<div className={`${containerStyles} px-5 site-container relative`}>
 				<h2 className={`${h1Heading} text-left`}>Non-Tech Skill Set</h2>
 
 				<motion.div
-					className='mt-10 mx-auto text-left flex flex-col justify-between gap-3 md:gap-0 md:mt-12 md:flex-row'
+					className='mt-10 mx-auto text-left flex flex-col justify-between gap-3  md:mt-12 md:flex-row'
 					style={{
 						rotateX,
 						scale,

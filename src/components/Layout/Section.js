@@ -14,7 +14,7 @@ const Section = forwardRef(function Section(
 	const opacity = useTransform(
 		scrollYProgress,
 		[0, 0.4, 0.8, 1],
-		[0, 1, 1, 0]
+		[0, 1, 1, 0.6]
 	);
 
 	const h1Heading = 'font-bold mb-5 text-2xl md:text-4xl lg:text-5xl';

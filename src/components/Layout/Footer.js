@@ -26,9 +26,9 @@ export default function Footer() {
 
 	return (
 		<>
-			<div id='contact-me' className='h-screen' />
+			<div tabIndex='0' id='contact-me' className='h-screen' />
 			<footer className='h-screen fixed flex flex-col justify-center w-full  bottom-0 left-0 z-0 pt-5 px-5'>
-				<div className={`${containerStyles} relative mx-auto`}>
+				<div className={`${containerStyles} relative w-full`}>
 					<div className='rounded-xl border border-solid border-violet-500 pt-12 pb-4 md:pt-16'>
 						<div className='absolute top-0 flex gap-1 pl-4 pt-[10px]'>
 							<div className={`${circleStyles} bg-red-600`} />
@@ -37,7 +37,7 @@ export default function Footer() {
 						</div>
 						<div className='border border-solid border-violet-500 absolute top-[30px] w-full' />
 
-						<div className='text-center'>
+						<div className='text-center px-5'>
 							<h2 className='font-bold mb-5 text-2xl md:text-4xl lg:text-5xl'>
 								Contact Me
 							</h2>
