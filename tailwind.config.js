@@ -1,11 +1,8 @@
-const { transform } = require('next/dist/build/swc');
-
 /** @type {import('tailwindcss').Config} */
 module.exports = {
 	content: [
-		'./src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/components/**/*.{js,ts,jsx,tsx,mdx}',
-		'./src/app/**/*.{js,ts,jsx,tsx,mdx}',
+		`./src/pages/**/*.{js,jsx,ts,tsx}`,
+		`./src/components/**/*.{js,jsx,ts,tsx}`,
 	],
 	theme: {
 		extend: {
@@ -21,6 +18,9 @@ module.exports = {
 				primary: '#5D0C7D',
 				secondary: '#410856',
 				dark: '#23042f',
+			},
+			content: {
+				code: 'url("../assets/images/misc/code.svg")',
 			},
 			keyframes: {
 				bouncing: {
