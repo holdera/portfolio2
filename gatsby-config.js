@@ -4,18 +4,24 @@
 module.exports = {
 	siteMetadata: {
 		title: `Alannah Holder's Portfolio Site`,
-		description: `Example project for the Gatsby Head API`,
-		//twitterUsername: `@gatsbyjs`,
-		//image: `/gatsby-icon.png`,
-		siteUrl: `https://www.yourdomain.tld`,
+		description: `Alannah Holder's Portfolio Site that will showcase your experience as a web Developer.`,
+		siteUrl: `https://www.aholder.net/`,
 	},
 	plugins: [
 		'gatsby-plugin-postcss',
-		// 'gatsby-plugin-google-gtag',
 		'gatsby-plugin-image',
 		'gatsby-plugin-mdx',
 		'gatsby-plugin-sharp',
 		'gatsby-transformer-sharp',
+		{
+			resolve: `gatsby-plugin-manifest`,
+			options: {
+				name: 'Meet Alannah Holder',
+				short_name: 'AH',
+				start_url: '/',
+				icon: 'src/assets/images/misc/favicon.png',
+			},
+		},
 		{
 			resolve: 'gatsby-source-filesystem',
 			options: {

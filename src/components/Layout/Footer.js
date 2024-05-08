@@ -47,8 +47,8 @@ export default function Footer() {
 
 	return (
 		<>
-			{/* <div tabIndex='0' id='contact-me' className='h-screen' /> */}
 			<footer
+				id='contact-me'
 				ref={sectionRef}
 				className='h-screen flex flex-col justify-center w-full bottom-0 left-0 z-0 pt-5 px-5'
 			>

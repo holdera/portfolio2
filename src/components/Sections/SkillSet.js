@@ -29,13 +29,15 @@ export default function SkillSet() {
 
 				<div className='mt-10 mx-auto text-left flex flex-col justify-between gap-3  md:mt-12 md:flex-row'>
 					{skillsData.map((skills, i) => (
-						<motion.div className='relative w-full h-full bg-fuchsia-500 rounded-xl p-[1px] overflow-hidden z-[1]'>
+						<motion.div
+							key={skills.text}
+							className='relative w-full h-full bg-fuchsia-500 rounded-xl p-[1px] overflow-hidden z-[1]'
+						>
 							<motion.div
 								className={`${gradient} duration-[3s] absolute z-[2] inset-0`}
 							/>
 							<motion.div
 								className='relative py-5 px-5 rounded-xl bg-black z-[3] h-[300px]'
-								key={skills.text}
 								style={{ translateY, opacity }}
 								transition={{
 									ease: 'linear',
