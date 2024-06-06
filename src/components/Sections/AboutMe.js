@@ -12,6 +12,9 @@ export default function AboutMe() {
 
 	const h1Heading = 'font-bold mb-5 text-2xl md:text-4xl lg:text-5xl';
 
+	const greeting = 'Hello My Name is Alannah Holder.';
+	const greetingArr = greeting.split('');
+
 	return (
 		<Section
 			ref={sectionRef}
@@ -19,29 +22,33 @@ export default function AboutMe() {
 			className='flex h-screen items-center justify-center text-center'
 		>
 			<h1 className={h1Heading}>
-				Hello My Name is{' '}
-				<span className='overflow-hidden relative md:w-[325px] md:h-[56px] lg:w-[433px] lg:h-[76px]  block md:inline-block align-top'>
-					<motion.span
-						className={gradientText}
-						initial={{ marginLeft: '-1000px' }}
-						animate={{ marginLeft: '0px' }}
-						transition={{
-							type: 'spring',
-							stiffness: 40,
-							duration: 3,
-						}}
-					>
-						Alannah&nbsp;Holder
-					</motion.span>
-				</span>
+				{greetingArr.map((g, i) => {
+					const findA = (el) => el === 'A';
+					const indexA = greetingArr.findIndex(findA);
+					return (
+						<motion.span
+							key={`letter-id-${i}`}
+							initial={{ opacity: 0 }}
+							animate={{ opacity: 1 }}
+							transition={{
+								type: 'spring',
+								stiffness: 60,
+								delay: i * 0.2,
+							}}
+						>
+							{i < indexA && g}
+							{i >= indexA && (
+								<span className={gradientText}>{g}</span>
+							)}
+						</motion.span>
+					);
+				})}
 			</h1>
+
 			<p className='text-lg md:text-xl md:px-5 lg:px-32'>
-				I am a{' '}
-				<b>
-					<span className={gradientText}>Front-End Developer</span>
-				</b>{' '}
-				who also loves watching horror movies, reading books and
-				graphic&nbsp;novels and&nbsp;traveling.
+				I am a <b className={gradientText}>Front-End Developer</b> with{' '}
+				<b className={gradientText}>9 years of experience</b> who loves
+				watching horror movies, reading books and&nbsp;traveling.
 			</p>
 			<p className='mt-5 text-lg md:text-xl'>
 				Keep scrolling to learn and{' '}
