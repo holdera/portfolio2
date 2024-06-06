@@ -160,15 +160,22 @@ export const techData = [
 export const skillsData = [
 	{
 		text: 'Web Accessibility Compliance',
-		desc: ['WCAG', 'AODA', 'Section 508'],
+		desc: ['WCAG 2.1 AA', 'AODA', 'Section 508'],
 	},
 	{
-		text: 'Cookie Privacy Laws',
-		desc: ['PIPEDA', 'GDPR'],
+		text: 'Analytics',
+		desc: [
+			'Google Analytics: GA4 and legacy of GA3',
+			'PIWIK',
+			'Social Media Pixels (Facebook, Reddit, etc.',
+		],
 	},
 	{
-		text: 'Google Analytics',
-		desc: ['GA4 and legacy of GA3', 'Implementation of GTM'],
+		text: 'More',
+		desc: [
+			'Cookie Privacy Laws including PIPEDA & GDPR',
+			'Experience with issue tracking software like Jira',
+		],
 	},
 ];
 
@@ -182,14 +189,12 @@ export const workData = [
 		),
 		date: 'February 2020 to April 2024',
 		workDesc: [
-			'Implemented front-end build outlined from the requirements in the functional specification document',
-			'Created websites, web applications, and email templates based off of the Sketch or Figma or Photoshop Documents (PSD) file provided by the creative team',
-			'Implemented tracking using Google Tag Manager and/or PIWIK that is in line with GDPR and other data protection laws',
-			'Ensured each site and email upheld to the standards of WCAG AA 2.1',
-			'Tested the accessibility of sites and applications using NVDA, Axe, ChromeVox, Voice Over and Web Aim',
-			'Implemented bug fixes and solved cross browser issues',
+			'Created web applications, websites and email templates based off Sketch or Figma or Photoshop Document (PSD) files provided by the creative team',
+			'Built reusable code that was scalable and optimized for performance.',
 			'Worked with REST API’s to display and send data',
-			'Wrote documentation and conducted a presentation to share information with peers',
+			'Mentored other developers in tech and team processes and on other projects',
+			'Tested accessibility of sites and applications using NVDA, Axe, ChromeVox, Voice Over and Web Aim',
+			'Implemented tracking using Google Tag Manager and/or PIWIK that is in line with GDPR and other data protection laws',
 		],
 	},
 	{
@@ -202,7 +207,8 @@ export const workData = [
 		date: 'March 2015 to November 2018',
 		workDesc: [
 			'Created websites and landing pages based off Photoshop Documents (PSD) from the design team',
-			'Customized, added and updated site content and design for clients ',
+			'Updated and created custom theme templates for Wordpress',
+			'Customized, added and updated site content and design for clients',
 			'Conducted bug fixes and solved cross browser issues',
 			'Created onboard training guides to educate clients or developers on their team, on how to update their site and which plugins to use',
 		],
