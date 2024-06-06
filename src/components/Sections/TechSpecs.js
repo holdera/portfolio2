@@ -40,7 +40,7 @@ export default function TechSpecs() {
 								<motion.img
 									initial={{ opacity: 0.1 }}
 									whileHover={{ opacity: 1 }}
-									className='absolute object-contain'
+									className='absolute object-cover h-full w-full'
 									src={skills.image}
 									alt=''
 								/>

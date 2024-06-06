@@ -18,6 +18,11 @@ export default function WorkExperience() {
 	});
 
 	const height = useTransform(scrollYProgress, [0, 0.8], ['0%', '100%']);
+	const marginTop = useTransform(
+		scrollYProgress,
+		[0, 0.9],
+		['-1.3rem', '-0.5rem']
+	);
 	return (
 		<section
 			id='work-experience'
@@ -46,7 +51,11 @@ export default function WorkExperience() {
 							/>
 							<motion.div
 								id='circle'
-								className='w-5 h-5 rounded-full bg-fuchsia-500'
+								className='w-5 h-5 rounded-full bg-fuchsia-500 -mt-6'
+								style={{ marginTop }}
+								transition={{
+									delay: 3,
+								}}
 							/>
 						</div>
 					</div>

@@ -53,7 +53,7 @@ export default function AboutMe() {
 			<p className='mt-5 text-lg md:text-xl'>
 				Keep scrolling to learn and{' '}
 				<b>
-					<span className={gradientText}>see more!</span>
+					<span className={gradientText}>see&nbsp;more!</span>
 				</b>
 			</p>
 
