@@ -20,7 +20,7 @@ export default function WorkExperience() {
 	const height = useTransform(scrollYProgress, [0, 0.8], ['0%', '100%']);
 	const marginTop = useTransform(
 		scrollYProgress,
-		[0, 0.9],
+		[0, 1],
 		['-1.3rem', '-0.5rem']
 	);
 	return (

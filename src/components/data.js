@@ -189,9 +189,9 @@ export const workData = [
 		),
 		date: 'February 2020 to April 2024',
 		workDesc: [
-			'Created web applications, websites and email templates based off Sketch or Figma or Photoshop Document (PSD) files provided by the creative team',
-			'Built reusable code that was scalable and optimized for performance.',
-			'Worked with REST API’s to display and send data',
+			'Created web applications, websites and email templates based off Figma, Sketch or Photoshop (PSD) files provided by the creative team',
+			'Built scalable and reusable code that was optimized for performance',
+			'Worked with RESTful API’s to retrieve and send data',
 			'Mentored other developers in tech and team processes and on other projects',
 			'Tested accessibility of sites and applications using NVDA, Axe, ChromeVox, Voice Over and Web Aim',
 			'Implemented tracking using Google Tag Manager and/or PIWIK that is in line with GDPR and other data protection laws',

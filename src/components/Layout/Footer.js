@@ -43,7 +43,7 @@ export default function Footer() {
 
 	const circleStyles = 'rounded-full h-2.5 w-2.5';
 	const linkStyles =
-		'flex justify-center border-violet-500 mt-10 mx-auto font-bold rounded-xl border-2 border-solid py-3.5 px-5 hover:bg-violet-500 md:rounded-[60px]';
+		'flex justify-center border-violet-500 mx-auto font-bold rounded-xl border-2 border-solid py-3.5 px-5 hover:bg-violet-500 md:rounded-[60px]';
 
 	return (
 		<>
@@ -79,20 +79,23 @@ export default function Footer() {
 								If you liked what you saw and want to get in
 								touch, you can{' '}
 							</p>
-							<div className='flex justify-between gap-3 mx-auto px-5 md:max-w-[50%] md:gap-0'>
+							<div className='flex justify-between items-center gap-3 mx-auto px-5 mt-10 md:max-w-[50%] md:gap-0'>
 								<a
 									className={linkStyles}
 									href='mailto:holdera09@gmail.com'
 								>
 									email me
 								</a>
+
+								<p>Or</p>
+
 								<a
 									className={linkStyles}
 									href='https://docs.google.com/document/d/1btpbIiVrSqkXtWrJW4ksPCvmD6aY6uuQ/edit?usp=sharing&ouid=111814661169982273280&rtpof=true&sd=true'
 									target='_blank'
 									rel='noopener noreferrer'
 								>
-									view my resume
+									view resume
 								</a>
 							</div>
 						</motion.div>
