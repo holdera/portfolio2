@@ -16,8 +16,8 @@ export default function SkillSet() {
 		offset: ['center end', 'end center'],
 	});
 
-	const translateY = useTransform(scrollYProgress, [0, 0.4], [60, 0]);
-	const opacity = useTransform(scrollYProgress, [0, 0.4, 0.95], [0, 1, 0.9]);
+	const translateY = useTransform(scrollYProgress, [0, 0.3], [60, 0]);
+	const opacity = useTransform(scrollYProgress, [0, 0.3, 0.95], [0, 1, 0.9]);
 	return (
 		<section
 			id='non-tech-skillset'

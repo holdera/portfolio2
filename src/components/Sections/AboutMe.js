@@ -47,8 +47,8 @@ export default function AboutMe() {
 
 			<p className='text-lg md:text-xl md:px-5 lg:px-32'>
 				I am a <b className={gradientText}>Front-End Developer</b> with{' '}
-				<b className={gradientText}>9 years of experience</b> who loves
-				watching horror movies, reading books and&nbsp;traveling.
+				<b className={gradientText}>9&nbsp;years of experience</b> who
+				loves watching horror movies, reading books and&nbsp;traveling.
 			</p>
 			<p className='mt-5 text-lg md:text-xl'>
 				Keep scrolling to learn and{' '}
